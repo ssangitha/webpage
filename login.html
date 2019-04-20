@@ -1,0 +1,57 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<script>
+				
+			function mi() 
+			{ var item3 = document.getElementById("pwd1").value;
+			  var item4 = document.getElementById("email1").value;
+			 var a= localStorage.getItem('em');
+			 var b= localStorage.getItem('pa');	
+				
+					if ((item3 == b) && (item4 == a)) 
+				
+					{
+					alert("success");
+					window.location.href = "loginde.html";
+
+					}
+				else
+					{ alert("re-CHECK password");
+					
+					}
+			}
+				
+
+		</script>
+
+</head>
+<body>
+	<form style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Login</h1>
+    <hr>
+        <div class="form-group">
+    		<label for="email"> <b> Email </b> </label>
+    		<input type="text" class="form-control" id="email1" placeholder="Enter email" name="email">
+        </div>
+	<div class="form-group">
+    		<label for="psw"><b>Password</b></label>
+    		<input type="password" class="form-control" id="pwd1" placeholder="Enter password" name="pwd">
+        </div>
+	
+	<div>
+  	  <label>
+      		<input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+    	  </label>
+	</div>
+    <div class="clearfix" style="text-align: center">
+
+      <button type="button" class="btn btn-success" onclick="mi()">login</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
